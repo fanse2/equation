@@ -4,6 +4,9 @@
   font-family: "Quattrocento";
 }
 
+h2 {
+  margin: 20px;
+}
 #title {
   color: darkolivegreen;
   text-align: center;
@@ -90,4 +93,9 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.eq-div {
+  margin: auto;
+  display: inline-block;
 }

@@ -1,6 +1,9 @@
-const toggle1 = ["", "-"];
-const toggle2 = ["+", "-"];
+// Equation Variables
+const toggle1 = ["+", "-"];
+let slopeFactor = 1;
+let xIntercept = 1;
 
+// Dom Object
 const signObj1 = document.getElementById("btn-sign1");
 const signObj2 = document.getElementById("btn-sign2");
 const slopSign = document.getElementById("slop_sign");
@@ -20,20 +23,22 @@ const valX = document.getElementById("valX");
 function toggleVal1() {
   if (signObj1.textContent == toggle1[0]) {
     signObj1.textContent = toggle1[1];
-    signObj1.value = toggle2[1];
+    signObj1.value = toggle1[1];
+    slopSign.textContent = toggle1[1];
   } else {
     signObj1.textContent = toggle1[0];
-    signObj1.value = toggle2[0];
+    signObj1.value = toggle1[0];
+    slopSign.textContent = "";
   }
-  slopSign.textContent = signObj1.textContent;
+  //slopSign.textContent = signObj1.textContent;
 }
 function toggleVal2() {
-  if (signObj2.textContent == toggle2[0]) {
-    signObj2.textContent = toggle2[1];
-    signObj2.value = toggle2[1];
+  if (signObj2.textContent == toggle1[0]) {
+    signObj2.textContent = toggle1[1];
+    signObj2.value = toggle1[1];
   } else {
-    signObj2.textContent = toggle2[0];
-    signObj2.value = toggle2[0];
+    signObj2.textContent = toggle1[0];
+    signObj2.value = toggle1[0];
   }
 
   constSign.innerHTML = signObj2.textContent;
@@ -43,7 +48,7 @@ function num1Func() {
   let n1 = parseInt(num1.value);
   let d1 = parseInt(deno1.value);
   let answer1 = n1 / d1;
-  if (d1 === 0 || d1 === "") {
+  if (d1 === 0 || d1 === "+") {
     d1 = 1;
     deno1.value = d1;
   }
