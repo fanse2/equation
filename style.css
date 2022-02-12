@@ -99,3 +99,11 @@ input[type="number"] {
   margin: auto;
   display: inline-block;
 }
+
+.wraperGraph {
+  margin: auto;
+}
+
+#myGraph {
+  margin: 30px 200px;
+}
