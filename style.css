@@ -100,10 +100,12 @@ input[type="number"] {
   display: inline-block;
 }
 
-.wraperGraph {
-  margin: auto;
+.wrapperGraph {
+  width: 100%;
+  text-align: center;
 }
 
 #myGraph {
-  margin: 30px 200px;
+  margin: 30px;
+  display: inline;
 }
